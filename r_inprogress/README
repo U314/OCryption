@@ -1,0 +1,87 @@
+Dans un vm:
+
+     Compiler et installer serveur Ucengine avec toutes les dependances
+     Achevement du tutotial de firebreath 
+
+_____________________________________________________________________
+
+Ocamlcryption est un projet open-source ecrit en Ocaml implementant l'algorythme Rivest-Shamir-Adlman (RSA) sur des systemes unix.
+
+A l'heure actuel, la version 1.0 utilise le type "big_int" du module eponyme d'Ocaml 
+pour representer les nombres et effectuer les operations arithmetiques necessaire a:
+     - la recuperation de nombres premiers pseudo-aleatoire,
+     - a la generation d'un couple de cles prives,
+     - au chiffrement et dechiffrement de donnees.
+
+La version 1.0 est constitue de trois binaires:
+   | PrimeNumberGenerator 
+    \---> affiche sur la sortie standard un nombre premier aleatoirement choisis dans un intervalle
+   | RSAkeygen 
+    \---> genere un fichier *.pri et *.pub contenant respectivement les cles et le produit des deux nombres premiers ayant servis a les generer
+   | RSAcrypter
+    \----> chiffre ou dechiffre un fichier a la fois via les fichiers produit par RSAKeygen
+
+____________________________________________________________________
+Travail realiser:
+
+	---> beaucoup de recherche et de lecture de documentations:
+	     | Ocaml Inria: module Unix Big_int List String Array Stream 
+	       -> approfondissement du langage Ocaml
+	     | Wikipedia portail des mathematiques et de la cryptographie
+	       -> revision des mathematiques de terminal S et approfondissement
+	       -> initiation a la cryptographie
+	     | Apprentissage de git
+	       -> creation d'un depot git sur git:hub
+	      
+	---> tutorial du site du zero sur l'algorythme RSA
+	
+____________________________________________________________________
+
+La prochaine version est en cours, celle-ci devrait implementer :
+   - un type permettant de representer un nombre de n'importe quelle taille, sans perte de `ressources` 
+   - un systemes de creations et d'applications de fonctions pour generer des donnees a partir d'une donnee.
+   - le test de primalite Agrawal-Kayal-Saxena (AKS) pour optimiser la generation de nombre premiers.
+
+et elle implemente actuellement une generation de cles tres lente ainsi qu'une fonction pour chiffrer et dechiffrer.
+
+_____________________________________________________________________
+
+problematique resolu
+---> approfondissement des base en un langage de prog "Ocaml"
+     		      -> sys unix
+		      -> stream
+		      -> channel
+
+---> initiation a la cryptographie 
+     		implementation : RSA
+---> implementation d'algorythme mathematiques
+---> generation de nombre premier infini (limit by your engine) aleatoire mais tres lente et lourdes ---> utilisation de bc
+
+problematique actuel:
+Rester sur un big_int et etre limite ou optimiser les nombres infinis ...
+
+Repartir la charge sur les processus --> renseigner
+Optimiser les algo de generation de nombre premier et les fonctions recursives de projet
+Optimiser le temps de calcul --> renseigner + compilation en byte code may be
+
+Coder un serveur ocaml pour le projet ou utiliser client /serveur fournis par le projet ocsigen ?
+
+Creer interface graphique avec Graphics ou Ocaml SDL
+
+Contenu actuel:
+
+Utilisant: les type big_int du systemes
+
+pseudo random prime number already in v1,0
+keygen already in v1,0
+cryptage already in v1,0
+
+Contenu a venir:
+
+contructeur de contructeur de donnee --> not implemented yet
+--> l'equation d'une fonction qui prend les differentes valeurs de la donnees en fonction d'un index
+--> choix de constantes random ou par utilisateur ?
+
+Interface Graphique
+/!\ Serveur ? Client ? /!\
+

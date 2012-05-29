@@ -1,0 +1,8 @@
+cryptage.cmi: 
+tool.cmi: 
+cryptage.cmo: cryptage.cmi 
+cryptage.cmx: cryptage.cmi 
+tool.cmo: tool.cmi 
+tool.cmx: tool.cmi 
+main.cmo: tool.cmi cryptage.cmi 
+main.cmx: tool.cmx cryptage.cmx 

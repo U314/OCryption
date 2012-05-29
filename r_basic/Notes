@@ -1,0 +1,20 @@
+processus pour effectuer les operations de calcul
+processus pour generer les cles ->  interroge les processus de calcul
+processus pour crypter -> interroge les processus de calcul
+| ---> lancer en meme temps que le client sur la machine sur demande du serveur
+
+
+serveur:
+	bdd:	MySQL
+
+	accepter les connexions des clients.
+	connecter le client a un channel
+	
+	
+processus		pere
+			 |_____________ processus qui accepte les connections puis ban si username/passwd incorrect
+			 |
+			 |
+			 
+
+Daemon -> 
