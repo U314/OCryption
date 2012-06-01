@@ -20,3 +20,6 @@ Update client:
        Transmitting data done
        Receiving data in progress
 
+01/06/2012
+Update rsa : done only front-end in stand by
+
